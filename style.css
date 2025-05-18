@@ -1,104 +1,125 @@
-body {
+/* Reset básico */
+* {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #111;
-  color: #fff;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #000;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* Cabeçalho */
 header {
-  background-color: #1e1e1e;
+  background-color: #111;
   text-align: center;
-  padding: 30px 10px;
+  padding: 40px 20px;
+  border-bottom: 1px solid #333;
 }
 
 header h1 {
-  margin: 0;
-  font-size: 2.5em;
+  font-size: 2.8em;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
 }
 
+header p {
+  font-size: 1.1em;
+  color: #bbb;
+}
+
+/* Grid de jogos */
 .jogos {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 20px;
-  gap: 20px;
+  padding: 40px 20px;
+  gap: 30px;
 }
 
+/* Cartão do jogo */
 .jogo {
-  background-color: #222;
-  border-radius: 10px;
-  padding: 15px;
+  background-color: #111;
+  border: 1px solid #222;
+  border-radius: 12px;
+  padding: 20px;
   width: 280px;
   text-align: center;
-  box-shadow: 0 0 10px #000;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.jogo:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
 }
 
 .jogo img {
   width: 100%;
-  border-radius: 8px;
+  border-radius: 10px;
+  margin-bottom: 15px;
 }
 
 .jogo h2 {
-  margin-top: 10px;
+  font-size: 1.2em;
+  margin-bottom: 8px;
+  color: #fff;
 }
 
+.jogo p {
+  font-size: 1em;
+  color: #aaa;
+  margin-bottom: 12px;
+}
+
+/* Botão */
 .jogo a {
   display: inline-block;
-  margin-top: 10px;
-  padding: 10px 15px;
-  background-color: #ff6600;
+  padding: 12px 20px;
+  background-color: transparent;
   color: #fff;
-  border-radius: 5px;
+  border: 1px solid #fff;
+  border-radius: 6px;
   text-decoration: none;
-  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  letter-spacing: 1px;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .jogo a:hover {
-  background-color: #e65c00;
+  background-color: #fff;
+  color: #000;
 }
 
+/* Rodapé */
 footer {
   text-align: center;
-  padding: 20px;
-  background-color: #1e1e1e;
+  padding: 30px 10px;
+  background-color: #111;
+  border-top: 1px solid #333;
+  color: #777;
   font-size: 0.9em;
 }
-/* Estilos para telas pequenas (smartphones) */
+
+/* Responsivo */
 @media (max-width: 768px) {
   .jogo {
     width: 100%;
-    max-width: 300px;
+    max-width: 320px;
   }
 }
 
-/* Estilos para telas médias (tablets) */
 @media (min-width: 769px) and (max-width: 1024px) {
   .jogo {
     width: 45%;
   }
 }
 
-/* Estilos para telas grandes (desktops) */
 @media (min-width: 1025px) {
   .jogo {
     width: 30%;
   }
-}
-.jogo a {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 10px 15px;
-  background-color: #ff6600;
-  color: #fff;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  transition: background-color 0.3s, transform 0.2s;
-}
-
-.jogo a:hover {
-  background-color: #e65c00;
-  transform: scale(1.05);
 }
