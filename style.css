@@ -63,3 +63,42 @@ footer {
   background-color: #1e1e1e;
   font-size: 0.9em;
 }
+/* Estilos para telas pequenas (smartphones) */
+@media (max-width: 768px) {
+  .jogo {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* Estilos para telas médias (tablets) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .jogo {
+    width: 45%;
+  }
+}
+
+/* Estilos para telas grandes (desktops) */
+@media (min-width: 1025px) {
+  .jogo {
+    width: 30%;
+  }
+}
+.jogo a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: #ff6600;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.jogo a:hover {
+  background-color: #e65c00;
+  transform: scale(1.05);
+}
